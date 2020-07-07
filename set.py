@@ -9,9 +9,6 @@ class Set:
     head = None
     size = 0
 
-    def __init__(self, h=None):
-        raise(NotImplementedError)
-
     def add(self, e):
         raise(NotImplementedError)
 
@@ -28,7 +25,8 @@ class Set:
 
 if __name__ == "__main__":
     print("Hello World")
-    my_set = Set(1)
+    my_set = Set()
+    my_set.add(1)
     my_set.add(2)
     my_set.add(3)
 
