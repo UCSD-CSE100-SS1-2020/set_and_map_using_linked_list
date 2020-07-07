@@ -10,46 +10,19 @@ class Set:
     size = 0
 
     def __init__(self, h=None):
-        if h:
-            self.head = ListNode(h)
-            self.size += 1
+        raise(NotImplementedError)
 
     def add(self, e):
-        if not self.contains(e):
-            temp = self.head
-            self.head = ListNode(e)
-            self.head.next = temp
-            self.size += 1
-    
+        raise(NotImplementedError)
+
     def remove(self, e):
-        prev = None
-        curr = self.head
-        while curr:
-            if curr.val == e:
-                if not prev:
-                    if self.head:
-                        self.head = self.head.next
-                else:
-                    prev.next = curr.next
-
-                self.size -= 1
-                return
-
-            prev = curr
-            curr = curr.next
+        raise(NotImplementedError)
     
     def contains(self, e):
-        curr = self.head
-        while curr:
-            if curr.val == e:
-                return True
-
-            curr = curr.next
-
-        return False
+        raise(NotImplementedError)
     
     def isEmpty(self):
-        return self.size == 0
+        raise(NotImplementedError)
 
 
 
